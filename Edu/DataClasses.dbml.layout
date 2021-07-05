@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/DataClasses" />
+  <nestedChildShapes>
+    <classShape Id="aa2e670a-e825-4dd6-b056-d3b613132299" absoluteBounds="4.875, 3.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataClasses/hafizbook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88880e8d-549c-4274-832a-d605c4597b56" absoluteBounds="4.89, 4.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d91aa25f-083e-487d-90af-16615b0df008" absoluteBounds="1.375, 2, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/DataClasses/Hifzstudent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6405090b-b346-46dd-b932-8fa7e12a77c5" absoluteBounds="1.3900000000000001, 2.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

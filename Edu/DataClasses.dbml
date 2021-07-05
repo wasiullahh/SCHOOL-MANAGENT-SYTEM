@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Madrsa" Class="DataClasses" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=WASIULLAHKHALIL;Initial Catalog=Madrsa;Integrated Security=True" SettingsObjectName="Edu.Properties.Settings" SettingsPropertyName="MadrsaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.hafizbook" Member="hafizbooks">
+    <Type Name="hafizbook">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="hafizbookdata" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hifzstudent" Member="Hifzstudents">
+    <Type Name="Hifzstudent">
+      <Column Name="idd" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fathername" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mobileno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="admissioninbook" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nic" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nation" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="doa" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="dob" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="paddress" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ddeletehafizbooldelete" Method="ddeletehafizbooldelete">
+    <Parameter Name="staffid" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.gethafizbook" Method="gethafizbook">
+    <ElementType Name="gethafizbookResult">
+      <Column Name="SNO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.inserthafizbook" Method="inserthafizbook">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updatehafizbook" Method="updatehafizbook">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insserthafizstd" Method="insserthafizstd">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="fathername" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mobile" Type="System.Int32" DbType="Int" />
+    <Parameter Name="admissioninbk" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="nic" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nation" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="doa" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="dob" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="address" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="paddress" Type="System.String" DbType="VarChar(150)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.gethafizstudent" Method="gethafizstudent">
+    <ElementType Name="gethafizstudentResult">
+      <Column Name="SNO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fathername" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mobileno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="admissionno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nation" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doa" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="cnic" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dob" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="adddress" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Paddress" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.upddatethafizstd" Method="upddatethafizstd">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="fathername" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mobile" Type="System.Int32" DbType="Int" />
+    <Parameter Name="admissioninbk" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="nic" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nation" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="doa" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="dob" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="address" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="paddress" Type="System.String" DbType="VarChar(150)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ddeletehafizstuddentdelete" Method="ddeletehafizstuddentdelete">
+    <Parameter Name="staffid" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ddeletenazrabooldelete" Method="ddeletenazrabooldelete">
+    <Parameter Name="staffid" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ddeletenazrastuddentdelete" Method="ddeletenazrastuddentdelete">
+    <Parameter Name="staffid" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.getnazrabook" Method="getnazrabook">
+    <ElementType Name="getnazrabookResult">
+      <Column Name="SNO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.insertnazrabook" Method="insertnazrabook">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.inssertnazrastd" Method="inssertnazrastd">
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="fathername" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mobile" Type="System.Int32" DbType="Int" />
+    <Parameter Name="admissioninbk" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="nic" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nation" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="doa" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="dob" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="address" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="paddress" Type="System.String" DbType="VarChar(150)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updatenazrabook" Method="updatenazrabook">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.upddatetnazrastd" Method="upddatetnazrastd">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="fathername" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mobile" Type="System.Int32" DbType="Int" />
+    <Parameter Name="admissioninbk" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="nic" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nation" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="doa" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="dob" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="address" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="paddress" Type="System.String" DbType="VarChar(150)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.getnazrastudent" Method="getnazrastudent">
+    <ElementType Name="getnazrastudentResult">
+      <Column Name="SNO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fathername" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mobileno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="admissionno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nation" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doa" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="cnic" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dob" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="adddress" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Paddress" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>
